@@ -10,7 +10,17 @@ const flags = require("./routes/flagRoute");
 const user = require("./routes/userRoute");
 
 
-
+app.get('/', (req,res) => {
+res.json({
+Title:"Carimu AutoMart",
+    Cars:"/cars",
+    Orders:"/orders",
+    Flags:"/flags",
+    SignUp:"/auth/signup",
+    Users:"/auth/users"
+    
+})
+})
 const swaggerUi = require('swagger-ui-express'),
     swaggerDocument = require('./swagger.json');
 
